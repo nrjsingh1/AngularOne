@@ -1,0 +1,40 @@
+<!-- <h1>this is employee add</h1>
+<form #myForm="ngForm">
+  FName:<input type="text" [(ngModel)]="emp.fname" name="fname" required #F />
+  {{ F.className }}
+  <br />
+  LName:<input
+    type="text"
+    [(ngModel)]="emp.lname"
+    name="lname"
+    required
+    #L="ngModel"
+  />{{ emp.lname }}
+  <span *ngIf="L.dirty && L.invalid">please enter last name </span>
+  <br />
+  Age:<input type="text" [(ngModel)]="emp.age" name="age" />{{ emp.age }}<br />
+
+  <button type="button" value="Cancel" (click)="Cancel()">Cancel</button>
+  <button
+    type="button"
+    value="Save"
+    (click)="SaveEmployees()"
+    [disabled]="myForm.form.invalid"
+  >
+    Save
+  </button>
+</form> -->
+
+<h1>this is employee add</h1>
+<form [formGroup]="MyForm">
+  FName:<input type="text" name="fname" formControlName="fname" /><br />
+  LName:<input type="text" name="lname" formControlName="lname" />
+  <span *ngIf="MyForm.controls.lname.invalid">please enter last name </span>
+  <br />
+  Age:<input type="text" name="age" formControlName="age" /><br />
+
+  <button type="button" value="Cancel" (click)="Cancel()">Cancel</button>
+  <button type="button" value="Save" (click)="SaveEmployees()">
+    Save
+  </button>
+</form>

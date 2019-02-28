@@ -1,0 +1,28 @@
+<h1>Hi i am an Employee</h1>
+
+<!-- <div class="one">
+  <label
+    >Num 1 = 10<input type="button" value="Show Num2" (click)="shownum1()"
+  /></label>
+</div>
+<div class="two">
+  <label
+    >Num 2 = 20<input type="button" value="Show Num1" (click)="shownum2()"
+  /></label>
+</div> -->
+
+<div [hidden]="hideList">
+  <employeelist
+    (addNew)="toggleList()"
+    [Employees]="MyEmployees"
+  ></employeelist>
+</div>
+<div [hidden]="!hideList">
+  <employeeadd
+    (cancel)="toggleList()"
+    (save)="SaveEmployees($event)"
+  ></employeeadd>
+</div>
+
+<customer></customer>
+<newcustomer> </newcustomer>

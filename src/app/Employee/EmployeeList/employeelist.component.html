@@ -1,0 +1,17 @@
+<h1>this is employee list</h1>
+<table border="1">
+  <tr>
+    <th>FName</th>
+    <th>LName</th>
+    <th>Age</th>
+  </tr>
+
+  <tr *ngFor="let x of Employees">
+    <td>{{ x.fname }}</td>
+    <td>{{ x.lname }}</td>
+    <td>{{ x.age }}</td>
+  </tr>
+</table>
+
+<br />
+<button type="button" (click)="addEmployee()">Add Employee</button>
