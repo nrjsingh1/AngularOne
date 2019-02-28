@@ -10,13 +10,19 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { CustomerComponent } from "./Customer/customer.component";
 //import { ConcatPipe } from "./pipes/ConcatPipe";
 import { HttpClientModule } from "@angular/common/http";
+import { RouterLink, RouterModule } from "@angular/router";
 @NgModule({
   imports: [
     BrowserModule,
     CustomerModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot([
+      { path: "customer", component: CustomerComponent },
+      // {path:'product',component:ProductComponent},
+      { path: "employee", component: EmployeeComponent }
+    ])
   ],
   declarations: [
     AppComponent,
