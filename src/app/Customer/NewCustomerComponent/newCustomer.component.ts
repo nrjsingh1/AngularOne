@@ -4,6 +4,8 @@ import { Component } from "@angular/core";
     selector:"newcustomer",
     template:"this is new customer"
 })
+
+//helllo
 export class NewCustomerComponent{
 
 }
