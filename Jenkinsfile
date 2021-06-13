@@ -1,5 +1,4 @@
 #!groovy
-@Library(['rialto_pipeline_lib']) _
 
 pipeline {
 
